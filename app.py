@@ -7,7 +7,7 @@ from util.data_preprocessing import preprocess_data
 @app.route('/', methods=['GET', 'POST'])
 def home():
     form = forms.UploadForm()
-    classification_statement = False
+    prediction = False
     if form.validate_on_submit():
         classifier = KNeighborsClassifier(n_neighbors=int(form.n_neighbors.data))
 
@@ -16,10 +16,9 @@ def home():
 
         X_train, y_train, test = preprocess_data()
         classifier.fit(X_train, y_train)
-        classification = classifier.predict(test)
-        classification_statement = f'Classification: {classification}'
+        prediction = classifier.predict(test)
 
-    return render_template('home.html', form=form, prediction=classification_statement)
+    return render_template('home.html', form=form, prediction=prediction)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -11,6 +11,10 @@ class KNeighborsClassifier():
         self.y = y
 
     def predict(self, predict_X):
+        
+        if self.n_neighbors > len(self.X):
+            return f'ERROR: The number of neighbors ({self.n_neighbors}) selected is greater than the number of data points.'
+
         all_distances = []
         for row_index, row in enumerate(self.X):
             total_distance = 0
@@ -26,5 +30,5 @@ class KNeighborsClassifier():
             category_counts[distance[1]] += 1
         prediction = max(category_counts, key=category_counts.get)
         
-        return prediction
+        return f'Classification: {prediction}'
 
