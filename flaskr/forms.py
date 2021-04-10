@@ -1,4 +1,4 @@
-from flask_wtf import FlaskForm
+from flask_wtf import FlaskForm # FlaskForm is a class that tcan be inherited from to create cutomizable forms. This is provided by the flask_wtf library.
 from wtforms import SubmitField, SelectField
 from wtforms.validators import DataRequired
 from flask_wtf.file import FileField, FileAllowed
