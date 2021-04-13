@@ -1,7 +1,7 @@
-from flask_wtf import FlaskForm # FlaskForm is a class that tcan be inherited from to create cutomizable forms. This is provided by the flask_wtf library.
-from wtforms import SubmitField, SelectField
-from wtforms.validators import DataRequired
-from flask_wtf.file import FileField, FileAllowed
+from flask_wtf import FlaskForm # FlaskForm is a class that can be inherited from to create cutomizable forms. This is provided by the flask_wtf library.
+from wtforms import SubmitField, SelectField # SubmitField and FileField are both classes that can be used to create input fields of forms. These classes were created as a part of the wtform library.
+from wtforms.validators import DataRequired # DataRequired() is a class that notifies the FlaskForm class that the respective field is required to fill out by the user.
+from flask_wtf.file import FileField, FileAllowed # FileField() is a class that servers as an upload field for a file, FileAllowed() is a validator class that can restrict the type of files uploaded.s
 
 POSSIBLE_K_NEIGHBORS = ['1', '2', '3', '4', '5']
 

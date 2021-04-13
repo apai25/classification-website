@@ -1,4 +1,4 @@
-import numpy as np # Importing the Numpy library. This library provides us with the class "ndarray", which is essentially a two-dimensional list that comes with in-build methods.
+import numpy as np # Importing the Numpy library. This library provides us with the class "ndarray", which is essentially a two-dimensional list that comes with in-built methods.
 import pandas as pd # Importing the Pandas library. This library will provide functions that allow us to read data from a CSV file stream.
 
 def preprocess_data():
