@@ -1,5 +1,4 @@
-from math import sqrt # The sqrt() function from the math library simply returns the square root of a float passed in as an argument.
-
+from math import sqrt
 class KNeighborsClassifier():
     def __init__(self, n_neighbors):
         self.n_neighbors = n_neighbors
@@ -19,7 +18,7 @@ class KNeighborsClassifier():
             for value_index, value in enumerate(row):
                 total_distance += sqrt((value - predict_X[0][value_index]) ** 2)
             all_distances.append((total_distance, self.y[row_index][0]))
-        lowest_n_distances = sorted(all_distances)[:self.n_neighbors] # sorted() is an in-built Python function that sorts a list from least to greatest.
+        lowest_n_distances = sorted(all_distances)[:self.n_neighbors]
         labels = set(item[1] for item in lowest_n_distances)
 
         category_counts = {label: 0 for label in labels}
