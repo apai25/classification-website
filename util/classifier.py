@@ -11,7 +11,7 @@ class KNeighborsClassifier():
     def predict(self, predict_X):
         
         if self.n_neighbors > len(self.X):
-            return (f'ERROR: The number of neighbors selected ({self.n_neighbors}) 
+            return (f'ERROR: The number of neighbors selected ({self.n_neighbors})\
             is greater than the number of data points.')
 
         all_distances = []
