@@ -15,7 +15,8 @@ class UploadForm(FlaskForm):
                                 validators=[FileAllowed(['csv'], 
                                 message='Make sure that you are uploading a csv file.'), DataRequired()])
     
-    n_neighbors = SelectField(label='Please select the number of neighbors the classifier should use for classification: ',
+    n_neighbors = SelectField(label='Please select the number of neighbors\
+                              the classifier should use for classification: ',
                               choices=POSSIBLE_K_NEIGHBORS,
                               validators=[DataRequired()])
 
