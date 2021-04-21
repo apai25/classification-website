@@ -1,5 +1,5 @@
+# /app.py: Sets up app routing and contains backend code that processes form data
 from flaskr import app, forms 
-
 from flask import render_template 
 from util.classifier import KNeighborsClassifier 
 from util.data_preprocessing import preprocess_data 

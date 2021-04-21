@@ -1,3 +1,4 @@
+# /util/classifier.py: contains the classifier being used
 from math import sqrt
 class KNeighborsClassifier():
     def __init__(self, n_neighbors):
