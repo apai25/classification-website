@@ -10,9 +10,8 @@ class KNeighborsClassifier():
 
     def predict(self, predict_X):
         
-        if self.n_neighbors > len(self.X):
-            return (f'ERROR: The number of neighbors selected ({self.n_neighbors})\
-            is greater than the number of data points.')
+        if len(predict_X) >= 1:
+            return f'Error: The prediction CSV file has more than one row.'
 
         all_distances = []
         for row_index, row in enumerate(self.X):
@@ -30,4 +29,3 @@ class KNeighborsClassifier():
         prediction = max(category_counts, key=category_counts.get)
         
         return f'Classification: {prediction}'
-
